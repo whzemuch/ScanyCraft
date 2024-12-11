@@ -1,3 +1,5 @@
+import pandas as pd
+
 def find_common_items(*sets):
     """
     Find common elements across multiple sets.

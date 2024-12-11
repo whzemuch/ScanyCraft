@@ -1,3 +1,8 @@
+import numpy as np
+import scanpy as sc
+from tqdm.auto import tqdm
+
+
 def get_pairwise_deg(adata, comparisons, groupby_col='group', method='wilcoxon'):
     """
     Perform pairwise differential expression analysis for specified comparisons.

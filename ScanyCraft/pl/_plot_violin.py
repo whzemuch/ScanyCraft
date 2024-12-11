@@ -1,4 +1,5 @@
-
+import scanpy as sc 
+import matplotlib.pyplot as plt
 
 def plot_violin_by_subset(adata, subset_by, gene_name, groupby, groupby_order=None,  ncol=1, figsize=(5, 12), y_range=None, layer=None, use_raw=True):
     """
