@@ -192,7 +192,6 @@ def analyze_and_plot_gsea_results(
         **kwargs
     )
     plt.suptitle(title)
-    plt.tight_layout()
     plt.show()
 
 
