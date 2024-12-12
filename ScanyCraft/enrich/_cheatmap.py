@@ -183,8 +183,8 @@ def analyze_and_plot_gsea_results(
     top_annotation = pch.HeatmapAnnotation(df=annotation_df, plot=False)
 
     # Step 3: Plot Heatmap
-    plt.figure(figsize=figsize)
-    pch.ClusterMapPlotter(
+    fig = plt.figure(figsize=figsize)
+    cm = pch.ClusterMapPlotter(
         data=gsea_data.adata.to_df(),
         top_annotation=top_annotation,
         annot=gsea_data.adata.to_df(layer='sig_anno'),
@@ -192,7 +192,7 @@ def analyze_and_plot_gsea_results(
         **kwargs
     )
     plt.suptitle(title)
-    plt.show()
+    return fig, cm
 
 
 
